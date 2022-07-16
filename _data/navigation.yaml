@@ -1,0 +1,6 @@
+- name: Home
+  link: /
+- name: Members
+  link: /members.html
+- name: Published
+  link: /published.html

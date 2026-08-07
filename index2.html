@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seungmin Oh</title>
+  <meta name="description" content="Seungmin Oh — Ph.D. candidate researching efficient multimodal AI: vision, LLM compression, and vision-language-action models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%230c5f6e'/></svg>">
+</head>
+<body>
+
+<!-- ===== inline icon sprite (publication thumbnails) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-swap" viewBox="0 0 24 24"><path d="M4 9h13l-3-3M20 15H7l3 3"/></symbol>
+    <symbol id="ic-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 9.3h16M4 14.7h16M9.3 4v16M14.7 4v16"/></symbol>
+    <symbol id="ic-scan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 13c1.5-3 3-3 4-1s2.5 1 3-1"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/></symbol>
+    <symbol id="ic-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14l1.8 1.8L15 12"/></symbol>
+    <symbol id="ic-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></symbol>
+  </defs>
+</svg>
+
+<main>
+
+  <!-- ======================= Header ======================= -->
+  <header class="intro">
+    <div class="avatar">
+      <img src="assets/profile.jpg" alt="Seungmin Oh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="avatar-fallback">SO</span>
+    </div>
+    <div class="intro-body">
+      <h1>Seungmin Oh <span class="hangul">오승민</span></h1>
+      <p class="affil">Ph.D. Candidate, Computational Intelligence Lab, Ajou University</p>
+      <p class="bio">
+        I work on making large neural networks <strong>efficient enough to run under real
+        compute limits</strong>, on edge devices and inside robot control loops. My research
+        covers vision backbones, LLM and VLM compression, and vision-language-action (VLA)
+        models for robotic manipulation.
+      </p>
+      <nav class="links">
+        <a href="mailto:oh1.seungmin@gmail.com">Email</a><span>/</span>
+        <a href="CV.pdf" target="_blank" rel="noopener">CV</a><span>/</span>
+        <a href="https://scholar.google.com/citations?user=dwOJaW8AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a><span>/</span>
+        <a href="https://github.com/SoongE" target="_blank" rel="noopener">GitHub</a><span>/</span>
+        <a href="https://www.linkedin.com/in/soonge" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= News ======================= -->
+  <section id="news">
+    <h2><span>News</span></h2>
+    <ul class="news-list">
+      <li><span class="date">Sep 2025</span><span>Awarded the Next-Generation Science &amp; Engineering Scholars Fellowship (NRF Korea).</span></li>
+      <li><span class="date">Apr 2025</span><span><strong>1st place</strong>, IEEE Low-Power Computer Vision Challenge, Track&nbsp;1, at the Computer Vision and Pattern Recognition (CVPR) 2025 workshop, deployed on Snapdragon via Qualcomm AI&nbsp;Hub.</span></li>
+      <li><span class="date">Sep 2024</span><span>Paper accepted to the Asian Conference on Computer Vision (ACCV) 2024 (Neural Substitution for Branch-Level Re-parameterization).</span></li>
+      <li><span class="date">Sep 2024</span><span>Filed a PCT patent on a neural-network CT triage classifier.</span></li>
+      <li><span class="date">Apr 2024</span><span>Paper on the origins of CNN and ViT architectures published in <em>Scientific Reports</em>.</span></li>
+      <li><span class="date">Dec 2023</span><span>Paper on CT-based small bowel obstruction triage published in the <em>International Journal of Surgery</em>.</span></li>
+    </ul>
+  </section>
+
+  <!-- ======================= Research ======================= -->
+  <section id="research">
+    <h2><span>Research</span></h2>
+    <div class="research-item">
+      <h3>Efficient architectures &amp; on-device deployment</h3>
+      <p>
+        <em>Neural substitution</em> extends re-parameterization from block-level to
+        branch-level connectivity (ACCV 2024). The same drive toward efficiency led to the
+        first-place on-device classification solution at the 2025 IEEE Low-Power Computer
+        Vision Challenge, deployed on Snapdragon hardware via Qualcomm AI Hub.
+      </p>
+    </div>
+    <div class="research-item">
+      <h3>Understanding CNN and ViT behavior</h3>
+      <p>
+        Why do CNNs and ViTs behave differently on medical scans? By redesigning robustness,
+        invariance, and shape-texture analyses for medical data, we traced where each
+        architecture's behavior originates (<em>Scientific Reports</em>, 2024).
+      </p>
+    </div>
+    <div class="research-item">
+      <h3>Clinical prediction from 3D CT</h3>
+      <p>
+        A 3D CNN with a dual-branch classifier flags high-risk small bowel obstruction
+        patients at 0.90 AUROC on a multi-center cohort (<em>International Journal of
+        Surgery</em>, 2023), and the classifier was filed as a PCT patent.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= Publications ======================= -->
+  <section id="publications">
+    <h2><span>Publications</span></h2>
+
+    <ol class="pub-list">
+      <li>
+        <span class="thumb"><img src="assets/publication_images/lpcvc2025-layer-merging.jpg" alt="Layer merging with hidden-state imitation" loading="lazy" onerror="this.remove()"><svg><use href="#ic-chip"/></svg></span>
+        <div class="kw"><span>Low-Power Vision</span><span>Edge Deployment</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Evaluation of Winning Solutions of 2025 Low Power Computer Vision Challenge</p>
+          <p class="summary">The 2025 challenge benchmarked efficient vision models on real edge hardware. This report covers the competition design and the winning entries, including our Track 1 solution.</p>
+          <p class="authors">Zihao Ye, &hellip;, <strong>Seungmin Oh</strong>, Jongbin Ryu, et&nbsp;al.</p>
+          <p class="meta"><span class="venue">arXiv preprint, 2026</span> <a href="https://arxiv.org/abs/2604.19054" target="_blank" rel="noopener">paper</a> <a href="https://github.com/SoongE/LPCV2025_Track1_Winning_Solution" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="thumb"><img src="assets/publication_images/accv-neural-substitution.jpg" alt="Block-level vs branch-level connectivity" loading="lazy" onerror="this.remove()"><svg><use href="#ic-swap"/></svg></span>
+        <div class="kw"><span>Re-parameterization</span><span>Efficient Architectures</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Neural Substitution for Branch-Level Network Re-parameterization</p>
+          <p class="summary">Re-parameterization usually works only within a block. Substituting local paths in training keeps branch-level connectivity and folds activations into the linear form.</p>
+          <p class="authors"><strong>Seungmin Oh</strong>, Jongbin Ryu</p>
+          <p class="meta"><span class="venue">Asian Conference on Computer Vision, 2024</span> <a href="https://openaccess.thecvf.com/content/ACCV2024/papers/Oh_Neural_Substitution_for_Branch-level_Network_Re-parameterization_ACCV_2024_paper.pdf" target="_blank" rel="noopener">paper</a> <a href="https://github.com/SoongE/neural_substitution" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="thumb"><img src="assets/publication_images/sci-reports-cnn-vit.jpg" alt="CNN vs ViT robustness comparison" loading="lazy" onerror="this.remove()"><svg><use href="#ic-grid"/></svg></span>
+        <div class="kw"><span>Medical Imaging</span><span>CNN/ViT</span><span>Model Analysis</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Analyzing to Discover Origins of CNNs and ViT Architectures in Medical Images</p>
+          <p class="summary">Why do CNNs and ViTs behave differently on medical scans? We redo robustness, invariance, and shape-texture analyses to trace where each architecture's behavior originates.</p>
+          <p class="authors"><strong>Seungmin Oh</strong>, Namkug Kim, Jongbin Ryu</p>
+          <p class="meta"><span class="venue">Scientific Reports, 2024</span> <a href="https://www.nature.com/articles/s41598-024-58382-3" target="_blank" rel="noopener">paper</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="thumb"><img src="assets/publication_images/ijs-small-bowel.jpg" alt="Dual-branch CT classifier architecture" loading="lazy" onerror="this.remove()"><svg><use href="#ic-scan"/></svg></span>
+        <div class="kw"><span>Medical Imaging</span><span>3D CNN</span><span>Clinical Prediction</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Deep Learning Using Computed Tomography to Identify High-Risk Patients for Acute Small Bowel Obstruction: Development and Validation of a Prediction Model</p>
+          <p class="summary">Judging who needs surgery for small bowel obstruction is hard from CT alone. A dual-branch 3D CNN flags high-risk patients at 0.90 AUROC on a multi-center cohort.</p>
+          <p class="authors"><strong>Seungmin Oh</strong>, Jongbin Ryu, Hojung Shin, et&nbsp;al.</p>
+          <p class="meta"><span class="venue">International Journal of Surgery, 2023</span> <a href="https://doi.org/10.1097/JS9.0000000000000721" target="_blank" rel="noopener">paper</a> <a href="https://github.com/SoongE/DBADRP_Classifier" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="thumb"><img src="assets/publication_images/pct-sbo-classifier.jpg" alt="Patient cohort selection flow" loading="lazy" onerror="this.remove()"><svg><use href="#ic-doc"/></svg></span>
+        <div class="kw"><span>Medical Imaging</span><span>Patent</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Neural Network Classifier for Predicting High-Risk Small Bowel Obstruction Using Abdominal CT Images</p>
+          <p class="summary">A neural-network classifier that reads abdominal CT to predict high-risk small bowel obstruction, filed as a PCT patent from the clinical study above.</p>
+          <p class="authors">Hojung Shin, Jongbin Ryu, <strong>Seungmin Oh</strong></p>
+          <p class="meta"><span class="venue">PCT Patent Application</span> <span class="status">filed 2024</span></p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ======================= Honors ======================= -->
+  <section id="awards">
+    <h2><span>Honors &amp; Awards</span></h2>
+    <ul class="award-list">
+      <li><span class="date">2025</span><span><strong>1st Place</strong>, IEEE Low-Power Computer Vision Challenge, Track&nbsp;1, at the Computer Vision and Pattern Recognition (CVPR) 2025 workshop</span></li>
+      <li><span class="date">2023</span><span><strong>Global Top 100</strong>, Google Solution Challenge, for <em>Smiler</em>, an expression-training app for children with ASD</span></li>
+      <li><span class="date">2021</span><span><strong>Excellence Award</strong>, ICT Mentoring Conference (ACK 2021), KOSIA</span></li>
+      <li><span class="date">2021</span><span><strong>Best Student Paper, First Prize</strong>, Korea Digital Contents Society 20th Anniversary Contest</span></li>
+    </ul>
+  </section>
+
+  <!-- ======================= Misc ======================= -->
+  <section id="misc">
+    <h2><span>Beyond Papers</span></h2>
+    <p>
+      I built and run our lab's GPU cluster, 16 nodes with eight RTX&nbsp;3090s each. That
+      means containerized provisioning, per-node CUDA isolation, and training jobs that run
+      unattended for days. Day to day I write performance-minded C/C++ and Python, and I
+      deploy models on-device with Qualcomm AI&nbsp;Hub. Outside of research, I taught AI
+      tutorials for undergraduate research assistants and helped start the Google Developer
+      Student Club chapter at Ajou University.
+    </p>
+  </section>
+
+  <footer>
+    <p>Seungmin Oh &middot; Suwon, South Korea &middot; <a href="mailto:oh1.seungmin@gmail.com">oh1.seungmin@gmail.com</a></p>
+  </footer>
+
+</main>
+
+</body>
+</html>

@@ -1,5 +1,27 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows / Linux desktop junk
+Thumbs.db
+Desktop.ini
+.directory
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+.sublime-*
+
+# Tooling, if a build step is ever added
+node_modules/
+.cache/
+*.log
+npm-debug.log*
+.env
+.env.local

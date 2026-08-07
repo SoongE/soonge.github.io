@@ -1,0 +1,319 @@
+/* ==========================================================
+   Glassmorphism on a research-teal palette with an orange accent.
+   deep teal  #0c5f6e   headings, venues, keywords  (discovery)
+   sea blue   #2563a8   background blob             (depth)
+   leaf       #2f8a5b   background blob             (growth)
+   orange     #e8630a   links & highlights          (the luxury pop)
+   ink        #1c2b31   text on glass
+   ========================================================== */
+
+:root {
+  --ink: #1c2b31;
+  --muted: #47616a;
+  --faint: #7b929a;
+  --primary: #0c5f6e;
+  --primary-soft: rgba(12, 95, 110, 0.10);
+  --primary-border: rgba(12, 95, 110, 0.22);
+  --accent: #e8630a;
+  --accent-soft: rgba(232, 99, 10, 0.10);
+
+  --glass: rgba(255, 255, 255, 0.58);
+  --glass-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-shadow: 0 10px 34px rgba(12, 95, 110, 0.12);
+  --rule: rgba(12, 95, 110, 0.13);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  color: var(--ink);
+  font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+  font-size: 16.5px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background: #eaf1f0;
+  background-image:
+    radial-gradient(52% 44% at 8% 0%, rgba(47, 138, 91, 0.34), transparent 72%),
+    radial-gradient(50% 42% at 96% 6%, rgba(37, 99, 168, 0.30), transparent 72%),
+    radial-gradient(46% 40% at 90% 90%, rgba(12, 95, 110, 0.26), transparent 72%),
+    radial-gradient(40% 36% at 4% 96%, rgba(232, 99, 10, 0.10), transparent 70%);
+  background-attachment: fixed;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3.4rem 1.5rem 3rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 99, 10, 0.35);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--accent); }
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+/* ---------------- Glass panels ---------------- */
+
+header.intro, section {
+  background: var(--glass);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  box-shadow: var(--glass-shadow);
+  padding: 1.9rem 2.2rem;
+}
+
+/* ---------------- Header / intro ---------------- */
+
+.intro {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--primary-soft);
+  border: 3px solid var(--glass-strong);
+  box-shadow: 0 6px 20px rgba(12, 95, 110, 0.18);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avatar-fallback {
+  display: none;
+  width: 100%; height: 100%;
+  align-items: center; justify-content: center;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 2.6rem; font-weight: 500;
+  color: var(--primary);
+}
+
+h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+}
+h1 .hangul { font-size: 1.35rem; color: var(--faint); font-weight: 400; margin-left: 0.35rem; }
+
+.affil { margin-top: 0.5rem; color: var(--muted); font-size: 0.98rem; }
+
+.bio { margin-top: 0.9rem; font-size: 0.99rem; color: var(--ink); }
+.bio strong { color: var(--primary); }
+
+.links { margin-top: 1.1rem; font-size: 0.95rem; }
+.links span { color: var(--faint); margin: 0 0.5rem; }
+.links a { border-bottom: none; font-weight: 500; }
+.links a:hover { border-bottom: 1px solid var(--accent); }
+
+/* ---------------- Section shell ---------------- */
+
+section { margin-bottom: 1.5rem; }
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding-bottom: 0.55rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+/* the accent bar tracks the heading text, so it is drawn on an inline-block
+   span sized to the words rather than on the full-width h2. */
+h2 span {
+  position: relative;
+  display: inline-block;
+}
+h2 span::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: calc(-0.55rem - 1px);
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ---------------- News ---------------- */
+
+.news-list { list-style: none; }
+.news-list li {
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  gap: 1rem;
+  padding: 0.42rem 0;
+  font-size: 0.96rem;
+}
+.date {
+  color: var(--faint);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.12rem;
+  white-space: nowrap;
+}
+
+/* ---------------- Research ---------------- */
+
+.research-item { margin-bottom: 1.3rem; }
+.research-item:last-child { margin-bottom: 0; }
+h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+.research-item p { color: var(--muted); font-size: 0.96rem; }
+.research-item em { color: var(--ink); font-style: italic; }
+
+/* ---------------- Publications ---------------- */
+
+.pub-note { font-size: 0.86rem; color: var(--faint); margin: -0.5rem 0 1.3rem; }
+.star { color: var(--accent); font-weight: 600; }
+
+.pub-list { list-style: none; counter-reset: pub; }
+
+.pub-list li {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+}
+.pub-list li + li { border-top: 1px solid var(--rule); }
+
+.thumb { grid-column: 1; grid-row: 1; }
+.pub-list .kw { grid-column: 1; grid-row: 2; align-self: start; }
+.pub-body { grid-column: 2; grid-row: 1 / span 2; }
+
+.thumb {
+  position: relative;
+  width: 200px;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 14px rgba(12, 95, 110, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: #fff;
+}
+/* when a real figure is present, hide the icon fallback entirely.
+   if the image 404s, onerror removes it and the icon returns. */
+.thumb:has(img) svg { display: none; }
+.thumb svg {
+  width: 46px;
+  height: 46px;
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.85;
+}
+
+.pub-body { min-width: 0; }
+
+.kw { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
+.kw span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--primary-border);
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pub-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.12rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.summary {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+.authors { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; }
+.authors strong { color: var(--ink); }
+
+.meta { font-size: 0.88rem; color: var(--faint); margin-top: 0.28rem; line-height: 1.4; }
+.venue { font-weight: 600; color: var(--primary); }
+.status { font-style: italic; color: var(--faint); margin-left: 0.3rem; }
+.meta a { font-weight: 500; margin-left: 0.3rem; }
+
+/* ---------------- Awards ---------------- */
+
+.award-list { list-style: none; }
+.award-list li {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: 1rem;
+  padding: 0.42rem 0;
+  font-size: 0.96rem;
+}
+
+/* ---------------- Misc + footer ---------------- */
+
+#misc p { color: var(--muted); font-size: 0.97rem; }
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--faint);
+}
+footer a { color: var(--muted); border-bottom-color: var(--rule); }
+
+/* ---------------- Small screens ---------------- */
+
+@media (max-width: 560px) {
+  main { padding: 2rem 1rem; }
+  header.intro, section { padding: 1.4rem 1.3rem; border-radius: 18px; }
+  .intro { grid-template-columns: 1fr; gap: 1.1rem; }
+  .avatar { width: 96px; height: 96px; }
+  h1 { font-size: 2rem; }
+  .news-list li { grid-template-columns: 4.7rem 1fr; gap: 0.7rem; }
+  .award-list li { grid-template-columns: 2.8rem 1fr; gap: 0.7rem; }
+  .pub-list li { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 0.7rem; }
+  .thumb { grid-column: 1; grid-row: auto; width: 100%; aspect-ratio: 16 / 8; }
+  .pub-list .kw { grid-column: 1; grid-row: auto; margin-top: 0; }
+  .pub-body { grid-column: 1; grid-row: auto; }
+  .thumb svg { width: 42px; height: 42px; }
+}

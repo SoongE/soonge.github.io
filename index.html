@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=18">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%230c5f6e'/></svg>">
 </head>
 <body>
@@ -21,6 +21,7 @@
     <symbol id="ic-scan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 13c1.5-3 3-3 4-1s2.5 1 3-1"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/></symbol>
     <symbol id="ic-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14l1.8 1.8L15 12"/></symbol>
     <symbol id="ic-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></symbol>
+    <symbol id="ic-vlm" viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><rect x="9.5" y="6.5" width="11" height="11" rx="2"/></symbol>
   </defs>
 </svg>
 
@@ -55,8 +56,9 @@
   <section id="news">
     <h2><span>News</span></h2>
     <ul class="news-list">
+      <li><span class="date">Aug 2026</span><span>Paper accepted to the British Machine Vision Conference (BMVC) 2026 (Re-calibrated Contrastive Loss for Semantic-Aligned Augmentation).</span></li>
       <li><span class="date">Sep 2025</span><span>Awarded the Next-Generation Science &amp; Engineering Scholars Fellowship (NRF Korea).</span></li>
-      <li><span class="date">Apr 2025</span><span><strong>1st place</strong>, IEEE Low-Power Computer Vision Challenge, Track&nbsp;1, at the Computer Vision and Pattern Recognition (CVPR) 2025 workshop, deployed on Snapdragon via Qualcomm AI&nbsp;Hub.</span></li>
+      <li><span class="date">Apr 2025</span><span>1st place, IEEE Low-Power Computer Vision Challenge, Track&nbsp;1, at the Computer Vision and Pattern Recognition (CVPR) 2025 workshop, deployed on Snapdragon via Qualcomm AI&nbsp;Hub.</span></li>
       <li><span class="date">Sep 2024</span><span>Paper accepted to the Asian Conference on Computer Vision (ACCV) 2024 (Neural Substitution for Branch-Level Re-parameterization).</span></li>
       <li><span class="date">Sep 2024</span><span>Filed a PCT patent on a neural-network CT triage classifier.</span></li>
       <li><span class="date">Apr 2024</span><span>Paper on the origins of CNN and ViT architectures published in <em>Scientific Reports</em>.</span></li>
@@ -100,6 +102,16 @@
 
     <ol class="pub-list">
       <li>
+        <span class="thumb"><img src="assets/publication_images/bmvc-recalibrated-contrastive.jpg" alt="Augmented contrastive space with adaptive re-calibration" loading="lazy" onerror="this.remove()"><svg><use href="#ic-vlm"/></svg></span>
+        <div class="kw"><span>Vision-Language</span><span>Contrastive Learning</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Re-calibrated Contrastive Loss for Semantic-Aligned Augmentation in Vision-Language Models</p>
+          <p class="summary">Fine-tuning a vision-language model compromises its generalization. Semantically aligned image-text augmentation, under a loss re-calibrated for multiple positives, keeps both.</p>
+          <p class="authors"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
+          <p class="meta"><span class="venue">British Machine Vision Conference, 2026</span> <a href="#" target="_blank" rel="noopener">paper</a> <a href="#" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
         <span class="thumb"><img src="assets/publication_images/lpcvc2025-layer-merging.jpg" alt="Layer merging with hidden-state imitation" loading="lazy" onerror="this.remove()"><svg><use href="#ic-chip"/></svg></span>
         <div class="kw"><span>Low-Power Vision</span><span>Edge Deployment</span></div>
         <div class="pub-body">
@@ -126,7 +138,7 @@
           <p class="pub-title">Analyzing to Discover Origins of CNNs and ViT Architectures in Medical Images</p>
           <p class="summary">Why do CNNs and ViTs behave differently on medical scans? We redo robustness, invariance, and shape-texture analyses to trace where each architecture's behavior originates.</p>
           <p class="authors"><strong>Seungmin Oh</strong>, Namkug Kim, Jongbin Ryu</p>
-          <p class="meta"><span class="venue">Scientific Reports, 2024</span> <a href="https://www.nature.com/articles/s41598-024-58382-3" target="_blank" rel="noopener">paper</a></p>
+          <p class="meta"><span class="venue">Scientific Reports, 2024</span> <a href="https://www.nature.com/articles/s41598-024-58382-3" target="_blank" rel="noopener">paper</a> <a href="#" target="_blank" rel="noopener">code</a></p>
         </div>
       </li>
       <li>
@@ -160,6 +172,21 @@
       <li><span class="date">2023</span><span><strong>Global Top 100</strong>, Google Solution Challenge, for <em>Smiler</em>, an expression-training app for children with ASD</span></li>
       <li><span class="date">2021</span><span><strong>Excellence Award</strong>, ICT Mentoring Conference (ACK 2021), KOSIA</span></li>
       <li><span class="date">2021</span><span><strong>Best Student Paper, First Prize</strong>, Korea Digital Contents Society 20th Anniversary Contest</span></li>
+    </ul>
+  </section>
+
+  <!-- ======================= Work in progress ======================= -->
+  <section id="wip">
+    <h2><span>Work in Progress</span></h2>
+    <p class="pub-note">Seven papers under review.</p>
+    <ul class="wip-list">
+      <li><strong>New VLA training mechanism</strong> &mdash; changing what the policy is trained to predict, so skills carry across robots instead of binding to one.</li>
+      <li><strong>Efficient VLA inference</strong> &mdash; cutting the compute spent on every control step while keeping task success.</li>
+      <li><strong>Closed-loop failure detection</strong> &mdash; noticing that an action is going wrong early enough for the policy to recover.</li>
+      <li><strong>Structured pruning for LLMs</strong> &mdash; holding accuracy when a large model is pruned down to a deployment budget.</li>
+      <li><strong>Scheduled model compression</strong> &mdash; ordering compression over the course of training rather than doing it all at once.</li>
+      <li><strong>Efficient test-time adaptation</strong> &mdash; adapting under distribution shift at inference time, cheaply and without collapse.</li>
+      <li><strong>Adaptive regularization</strong> &mdash; letting regularization respond to the data instead of applying one fixed strength.</li>
     </ul>
   </section>
 

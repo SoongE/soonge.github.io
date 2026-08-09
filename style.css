@@ -278,6 +278,25 @@ h3 {
 .status { font-style: italic; color: var(--faint); margin-left: 0.3rem; }
 .meta a { font-weight: 500; margin-left: 0.3rem; }
 
+/* ---------------- Work in progress ---------------- */
+
+.wip-list { list-style: none; }
+.wip-list li {
+  padding: 0.38rem 0 0.38rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  position: relative;
+}
+.wip-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.95em;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.wip-list strong { color: var(--primary); font-weight: 600; }
+
 /* ---------------- Awards ---------------- */
 
 .award-list { list-style: none; }

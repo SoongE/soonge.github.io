@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=20">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%230c5f6e'/></svg>">
 </head>
 <body>
@@ -21,6 +21,8 @@
     <symbol id="ic-scan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 13c1.5-3 3-3 4-1s2.5 1 3-1"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/></symbol>
     <symbol id="ic-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14l1.8 1.8L15 12"/></symbol>
     <symbol id="ic-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></symbol>
+    <symbol id="ic-prune" viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.6"/><circle cx="6" cy="12" r="1.6"/><circle cx="6" cy="18" r="1.6"/><circle cx="18" cy="9" r="1.6"/><path d="M7.6 6l8.8 3M7.6 12l8.8-3M7.6 12l8.8 6"/><path d="M7 17l4-4"/></symbol>
+    <symbol id="ic-layers" viewBox="0 0 24 24"><path d="M12 3l9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 16.5l9 4 9-4"/></symbol>
     <symbol id="ic-vlm" viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><rect x="9.5" y="6.5" width="11" height="11" rx="2"/></symbol>
   </defs>
 </svg>
@@ -56,7 +58,8 @@
   <section id="news">
     <h2><span>News</span></h2>
     <ul class="news-list">
-      <li><span class="date">Aug 2026</span><span>Paper accepted to the British Machine Vision Conference (BMVC) 2026 (Re-calibrated Contrastive Loss for Semantic-Aligned Augmentation).</span></li>
+      <li><span class="date">Aug 2026</span><span>Two papers accepted to the Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026 (Train Overcomplete, Deploy Compact; Layer-wise Curriculum Learning).</span></li>
+      <li><span class="date">Aug 2026</span><span>Paper accepted to the British Machine Vision Conference (BMVC) 2026 (Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning).</span></li>
       <li><span class="date">Sep 2025</span><span>Awarded the Next-Generation Science &amp; Engineering Scholars Fellowship (NRF Korea).</span></li>
       <li><span class="date">Apr 2025</span><span>1st place, IEEE Low-Power Computer Vision Challenge, Track&nbsp;1, at the Computer Vision and Pattern Recognition (CVPR) 2025 workshop, deployed on Snapdragon via Qualcomm AI&nbsp;Hub.</span></li>
       <li><span class="date">Sep 2024</span><span>Paper accepted to the Asian Conference on Computer Vision (ACCV) 2024 (Neural Substitution for Branch-Level Re-parameterization).</span></li>
@@ -70,28 +73,29 @@
   <section id="research">
     <h2><span>Research</span></h2>
     <div class="research-item">
-      <h3>Efficient architectures &amp; on-device deployment</h3>
+      <h3>Vision-language-action models for robotic manipulation</h3>
       <p>
-        <em>Neural substitution</em> extends re-parameterization from block-level to
-        branch-level connectivity (ACCV 2024). The same drive toward efficiency led to the
-        first-place on-device classification solution at the 2025 IEEE Low-Power Computer
-        Vision Challenge, deployed on Snapdragon hardware via Qualcomm AI Hub.
+        I want VLA policies to hold up inside real robot control loops, which means
+        three things at once: training that transfers across embodiments, inference
+        cheap enough to run every control step, and failures caught early enough for
+        the policy to recover.
       </p>
     </div>
     <div class="research-item">
-      <h3>Understanding CNN and ViT behavior</h3>
+      <h3>Efficient LLM compression</h3>
       <p>
-        Why do CNNs and ViTs behave differently on medical scans? By redesigning robustness,
-        invariance, and shape-texture analyses for medical data, we traced where each
-        architecture's behavior originates (<em>Scientific Reports</em>, 2024).
+        Structured pruning leaves a model that has to relearn what was removed. I work
+        on giving that recovery enough capacity, and on scheduling compression so the
+        error that accumulates in deeper layers is paid down first (EMNLP 2026).
       </p>
     </div>
     <div class="research-item">
-      <h3>Clinical prediction from 3D CT</h3>
+      <h3>Efficient vision &amp; test-time adaptation</h3>
       <p>
-        A 3D CNN with a dual-branch classifier flags high-risk small bowel obstruction
-        patients at 0.90 AUROC on a multi-center cohort (<em>International Journal of
-        Surgery</em>, 2023), and the classifier was filed as a PCT patent.
+        Making vision models cheap without giving up accuracy: re-parameterization at
+        branch level (ACCV 2024), transfer that keeps a vision-language model general
+        (BMVC 2026), and adaptation at test time under distribution shift. The same
+        drive won Track&nbsp;1 of the 2025 IEEE Low-Power Computer Vision Challenge.
       </p>
     </div>
   </section>
@@ -102,11 +106,31 @@
 
     <ol class="pub-list">
       <li>
+        <span class="thumb"><img src="assets/publication_images/emnlp-layerwise-curriculum.png" alt="Layer-wise curriculum with cumulative error over depth" loading="lazy" onerror="this.remove()"><svg><use href="#ic-layers"/></svg></span>
+        <div class="kw"><span>LLM Compression</span><span>Curriculum Learning</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Layer-wise Curriculum Learning for Efficient LLM Compression</p>
+          <p class="summary">Compression error accumulates in deeper layers. Shifting the optimization budget toward them as training proceeds converges 1.7&times; faster while halving GPU memory and hours.</p>
+          <p class="authors">Donggeon Lee, Dooyeon Na, <strong>Seungmin Oh</strong>, Jongbin Ryu</p>
+          <p class="meta"><span class="venue">Conference on Empirical Methods in Natural Language Processing, 2026</span> <a href="#" target="_blank" rel="noopener">paper</a> <a href="#" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="thumb"><img src="assets/publication_images/emnlp-overrep.png" alt="Overcomplete recovery module merged at deployment" loading="lazy" onerror="this.remove()"><svg><use href="#ic-prune"/></svg></span>
+        <div class="kw"><span>LLM Compression</span><span>Re-parameterization</span></div>
+        <div class="pub-body">
+          <p class="pub-title">Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning</p>
+          <p class="summary">After pruning, the recovery module is too small to relearn what was removed. Training it overcomplete, then merging it back, gains up to 8.4 points at no deployment cost.</p>
+          <p class="authors"><strong>Seungmin Oh</strong>, Donggeon Lee, Jongbin Ryu</p>
+          <p class="meta"><span class="venue">Conference on Empirical Methods in Natural Language Processing, 2026</span> <a href="#" target="_blank" rel="noopener">paper</a> <a href="#" target="_blank" rel="noopener">code</a></p>
+        </div>
+      </li>
+      <li>
         <span class="thumb"><img src="assets/publication_images/bmvc-recalibrated-contrastive.jpg" alt="Augmented contrastive space with adaptive re-calibration" loading="lazy" onerror="this.remove()"><svg><use href="#ic-vlm"/></svg></span>
         <div class="kw"><span>Vision-Language</span><span>Contrastive Learning</span></div>
         <div class="pub-body">
-          <p class="pub-title">Re-calibrated Contrastive Loss for Semantic-Aligned Augmentation in Vision-Language Models</p>
-          <p class="summary">Fine-tuning a vision-language model compromises its generalization. Semantically aligned image-text augmentation, under a loss re-calibrated for multiple positives, keeps both.</p>
+          <p class="pub-title">Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning in Vision-Language Models</p>
+          <p class="summary">Fine-tuning a vision-language model compromises its generalization. Transformation-aware prompt conditioning, under a loss re-calibrated for multiple positives, retains both.</p>
           <p class="authors"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
           <p class="meta"><span class="venue">British Machine Vision Conference, 2026</span> <a href="#" target="_blank" rel="noopener">paper</a> <a href="#" target="_blank" rel="noopener">code</a></p>
         </div>
@@ -164,6 +188,18 @@
     </ol>
   </section>
 
+  <!-- ======================= Funded projects ======================= -->
+  <section id="funding">
+    <h2><span>Funded Projects</span></h2>
+    <p class="pub-note">Applied research delivered with industry and government partners, 2021&ndash;2024.</p>
+    <ul class="award-list">
+      <li><span class="date">42dot</span><span>Real-time detection transformer for autonomous driving</span></li>
+      <li><span class="date">ETRI</span><span>Source-free domain adaptation for on-device face recognition</span></li>
+      <li><span class="date">ETRI</span><span>Masked-face recognition with domain adaptation</span></li>
+      <li><span class="date">NIA</span><span>Lymphoma recognition and survival analysis from 3D CT</span></li>
+    </ul>
+  </section>
+
   <!-- ======================= Honors ======================= -->
   <section id="awards">
     <h2><span>Honors &amp; Awards</span></h2>
@@ -178,13 +214,11 @@
   <!-- ======================= Work in progress ======================= -->
   <section id="wip">
     <h2><span>Work in Progress</span></h2>
-    <p class="pub-note">Seven papers under review.</p>
+    <p class="pub-note">Three under review, two in preparation.</p>
     <ul class="wip-list">
       <li><strong>New VLA training mechanism</strong> &mdash; changing what the policy is trained to predict, so skills carry across robots instead of binding to one.</li>
       <li><strong>Efficient VLA inference</strong> &mdash; cutting the compute spent on every control step while keeping task success.</li>
       <li><strong>Closed-loop failure detection</strong> &mdash; noticing that an action is going wrong early enough for the policy to recover.</li>
-      <li><strong>Structured pruning for LLMs</strong> &mdash; holding accuracy when a large model is pruned down to a deployment budget.</li>
-      <li><strong>Scheduled model compression</strong> &mdash; ordering compression over the course of training rather than doing it all at once.</li>
       <li><strong>Efficient test-time adaptation</strong> &mdash; adapting under distribution shift at inference time, cheaply and without collapse.</li>
       <li><strong>Adaptive regularization</strong> &mdash; letting regularization respond to the data instead of applying one fixed strength.</li>
     </ul>

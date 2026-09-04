@@ -10,18 +10,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,300..700;1,300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=84">
+  <link rel="stylesheet" href="style.css?v=101">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e8630c'/></svg>">
 </head>
 <body>
 
 <main>
 
-  <header class="masthead">
-    <div>
+  <header class="hero">
+    <div class="portrait">
+      <img src="assets/profile.jpg" alt="Seungmin Oh" width="172" height="215">
+    </div>
+    <div class="intro">
       <h1>Seungmin Oh <span class="hangul">오승민</span></h1>
       <p class="role">Ph.D. Candidate, Computational Intelligence Lab, Ajou University<span class="advisor">Advised by Prof. Jongbin Ryu</span></p>
-      <p class="lede">I make large neural networks <span class="mark">efficient enough to run</span> under tight compute limits, on edge devices and inside robot control loops. <span class="scope">My work spans vision, LLM, VLM, and VLA models.</span></p>
+      <p class="say">I make large neural networks <span class="key">efficient enough to run</span> under tight compute limits, on edge devices and inside robot control loops.</p>
       <nav class="channels">
         <a href="mailto:seungmin.oh16@gmail.com">Email</a>
         <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
@@ -30,310 +33,325 @@
         <a href="https://www.linkedin.com/in/soonge" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </div>
-    <div class="portrait">
-      <img src="assets/profile.jpg" alt="Seungmin Oh" width="172" height="215">
+    <div class="board">
+      <a class="fact" href="#publications"><strong>7</strong><span>publications, 2023 to 2026</span></a>
+      <a class="fact" href="#awards"><strong>1st</strong><span>of 45 teams at the IEEE Low-Power Computer Vision Challenge, CVPR 2025 workshop</span></a>
+      <div class="areas">
+        <span>Research areas</span>
+        <ul>
+          <li><a href="#publications" data-filter="Vision">Vision</a></li>
+          <li><a href="#publications" data-filter="LLM">LLM</a></li>
+          <li><a href="#publications" data-filter="VLM">VLM</a></li>
+          <li><a href="#publications" data-filter="VLA">VLA</a></li>
+          <li><a href="#publications" data-filter="EfficientAI">EfficientAI</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <div class="bar-anchor" aria-hidden="true"></div>
-  <div class="bar-rail">
-    <nav class="jump" aria-label="Jump to a section">
-      <ul>
-        <li><a href="#news">News</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#funding">Projects</a></li>
-        <li><a href="#grants">Funding</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#wip">In progress</a></li>
-        <li><a href="#misc">Beyond papers</a></li>
+  <div class="body">
+    <aside class="rail">
+      <nav class="jump" aria-label="Jump to a section">
+        <ul>
+          <li><a href="#news">News</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#funding">Projects</a></li>
+          <li><a href="#grants">Funding</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#wip">In progress</a></li>
+          <li><a href="#misc">Beyond papers</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="content">
+    <section id="news" class="band reveal">
+      <h2><span>News</span></h2>
+      <ul class="feed stagger">
+        <li><span class="when">Aug 2026</span><p>Two papers accepted to <strong>EMNLP 2026</strong>: Train Overcomplete, Deploy Compact, and Layer-wise Curriculum Learning.</p></li>
+        <li><span class="when">Aug 2026</span><p>Paper accepted to <strong>BMVC 2026</strong>: Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning.</p></li>
+        <li><span class="when">Sep 2025</span><p>Selected for the <strong>Doctoral Research Grant</strong>, a two-year award from NRF Korea.</p></li>
+        <li><span class="when">Apr 2025</span><p>First place, <strong>IEEE Low-Power Computer Vision Challenge</strong> Track 1 at the CVPR 2025 workshop, deployed on Snapdragon via Qualcomm AI Hub.</p></li>
+        <li><span class="when">Sep 2024</span><p>Paper accepted to <strong>ACCV 2024</strong>: Neural Substitution for Branch-Level Re-parameterization.</p></li>
+        <li><span class="when">Sep 2024</span><p>Filed a PCT patent on a neural-network CT triage classifier.</p></li>
+        <li><span class="when">Apr 2024</span><p>Paper on the origins of CNN and ViT architectures published in <em>Scientific Reports</em>.</p></li>
+        <li><span class="when">Dec 2023</span><p>Paper on CT-based small bowel obstruction triage published in the <em>International Journal of Surgery</em>.</p></li>
       </ul>
-    </nav>
-  </div>
+    </section>
 
-  <section id="news" class="band reveal">
-    <h2><span>News</span></h2>
-    <ul class="feed stagger">
-      <li><span class="when">Aug 2026</span><p>Two papers accepted to <strong>EMNLP 2026</strong>: Train Overcomplete, Deploy Compact, and Layer-wise Curriculum Learning.</p></li>
-      <li><span class="when">Aug 2026</span><p>Paper accepted to <strong>BMVC 2026</strong>: Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning.</p></li>
-      <li><span class="when">Sep 2025</span><p>Selected for the <strong>Doctoral Research Grant</strong>, a two-year award from NRF Korea.</p></li>
-      <li><span class="when">Apr 2025</span><p>First place, <strong>IEEE Low-Power Computer Vision Challenge</strong> Track 1 at the CVPR 2025 workshop, deployed on Snapdragon via Qualcomm AI Hub.</p></li>
-      <li><span class="when">Sep 2024</span><p>Paper accepted to <strong>ACCV 2024</strong>: Neural Substitution for Branch-Level Re-parameterization.</p></li>
-      <li><span class="when">Sep 2024</span><p>Filed a PCT patent on a neural-network CT triage classifier.</p></li>
-      <li><span class="when">Apr 2024</span><p>Paper on the origins of CNN and ViT architectures published in <em>Scientific Reports</em>.</p></li>
-      <li><span class="when">Dec 2023</span><p>Paper on CT-based small bowel obstruction triage published in the <em>International Journal of Surgery</em>.</p></li>
-    </ul>
-  </section>
-
-  <section id="research" class="band reveal">
-    <h2><span>Research</span></h2>
-    <div class="thread stagger">
-      <article>
-        <h3>Vision-language-action models for robotic manipulation</h3>
-        <p>
-          I want VLA policies to hold up inside real robot control loops, which means three
-          things at once: training that transfers across embodiments, inference cheap enough
-          to run every control step, and failures caught early enough for the policy to recover.
-        </p>
-      </article>
-      <article>
-        <h3>Efficient LLM compression</h3>
-        <p>
-          Structured pruning leaves a model that has to relearn what was removed. I work on
-          giving that recovery enough capacity, and on scheduling compression so the error
-          that accumulates in deeper layers is paid down first (EMNLP 2026).
-        </p>
-      </article>
-      <article>
-        <h3>Efficient vision and test-time adaptation</h3>
-        <p>
-          Making vision models cheap without giving up accuracy: re-parameterization at branch
-          level (ACCV 2024), transfer that keeps a vision-language model general (BMVC 2026),
-          and adaptation at test time under distribution shift. The same drive won Track 1 of
-          the 2025 IEEE Low-Power Computer Vision Challenge.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section id="publications" class="band reveal">
-    <h2><span>Publications</span></h2>
-
-    <div class="filterbar" hidden>
-      <div class="filters" role="group" aria-label="Filter publications by keyword">
-        <button type="button" data-key="all" aria-pressed="true">All</button>
-        <button type="button" data-key="Vision" aria-pressed="false">Vision</button>
-        <button type="button" data-key="LLM" aria-pressed="false">LLM</button>
-        <button type="button" data-key="VLM" aria-pressed="false">VLM</button>
-        <button type="button" data-key="VLA" aria-pressed="false">VLA</button>
-        <button type="button" data-key="EfficientAI" aria-pressed="false">EfficientAI</button>
-        <button type="button" data-key="Re-parameterization" aria-pressed="false">Re-parameterization</button>
-        <button type="button" data-key="Learning Methodology" aria-pressed="false">Learning Methodology</button>
+    <section id="research" class="band reveal">
+      <h2><span>Research</span></h2>
+      <div class="thread stagger">
+        <article>
+          <h3>Vision-language-action models for robotic manipulation</h3>
+          <p>
+            I want VLA policies to hold up inside real robot control loops, which means three
+            things at once: training that transfers across embodiments, inference cheap enough
+            to run every control step, and failures caught early enough for the policy to recover.
+          </p>
+        </article>
+        <article>
+          <h3>Efficient LLM compression</h3>
+          <p>
+            Structured pruning leaves a model that has to relearn what was removed. I work on
+            giving that recovery enough capacity, and on scheduling compression so the error
+            that accumulates in deeper layers is paid down first (EMNLP 2026).
+          </p>
+        </article>
+        <article>
+          <h3>Efficient vision and test-time adaptation</h3>
+          <p>
+            Making vision models cheap without giving up accuracy: re-parameterization at branch
+            level (ACCV 2024), transfer that keeps a vision-language model general (BMVC 2026),
+            and adaptation at test time under distribution shift. The same drive won Track 1 of
+            the 2025 IEEE Low-Power Computer Vision Challenge.
+          </p>
+        </article>
       </div>
-      <p class="filter-note" role="status" aria-live="polite" hidden></p>
-    </div>
+    </section>
 
-    <div class="year-group">
-      <span class="year">2026</span>
-      <ol class="works stagger">
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/emnlp-layerwise-curriculum.png" alt="Layer-wise curriculum with cumulative error over depth" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Layer-wise Curriculum Learning for Efficient LLM Compression</h3>
-            <p class="abstract">Compression error accumulates in deeper layers. Shifting the optimization budget toward them as training proceeds converges 1.7&times; faster while halving GPU memory and hours.</p>
-            <p class="byline">Donggeon Lee, Dooyeon Na, <strong>Seungmin Oh</strong>, Jongbin Ryu</p>
-            <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a>paper</a><a>code</a></p>
-          </div>
-          <ul class="tags"><li>LLM</li><li>EfficientAI</li><li>Curriculum Learning</li></ul>
-        </li>
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/emnlp-overrep.png" alt="Overcomplete recovery module merged at deployment" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning</h3>
-            <p class="abstract">After pruning, the recovery module is too small to relearn what was removed. Training it overcomplete, then merging it back, gains up to 8.4 points at no deployment cost.</p>
-            <p class="byline"><strong>Seungmin Oh</strong>, Donggeon Lee, Jongbin Ryu</p>
-            <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a>paper</a><a href="https://github.com/SoongE/OverRep" target="_blank" rel="noopener">code</a></p>
-          </div>
-          <ul class="tags"><li>LLM</li><li>EfficientAI</li><li>Re-parameterization</li></ul>
-        </li>
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/bmvc-recalibrated-contrastive.jpg" alt="Augmented contrastive space with adaptive re-calibration" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning in Vision-Language Models</h3>
-            <p class="abstract">Fine-tuning a vision-language model compromises its generalization. Transformation-aware prompt conditioning, under a loss re-calibrated for multiple positives, retains both.</p>
-            <p class="byline"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
-            <p class="imprint"><span class="where">British Machine Vision Conference, 2026</span><a>paper</a><a href="https://github.com/SoongE/ReCalCon" target="_blank" rel="noopener">code</a></p>
-          </div>
-          <ul class="tags"><li>VLM</li><li>Learning Methodology</li></ul>
-        </li>
-      </ol>
-    </div>
+    <section id="publications" class="band reveal">
+      <h2><span>Publications and patents</span></h2>
 
-    <div class="year-group">
-      <span class="year">2025</span>
-      <ol class="works stagger">
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/lpcvc2025-layer-merging.jpg" alt="Layer merging with hidden-state imitation" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Evaluation of Winning Solutions of 2025 Low Power Computer Vision Challenge</h3>
-            <p class="abstract">The 2025 challenge benchmarked efficient vision models on real edge hardware. This report covers the competition design and the winning entries, including our Track 1 solution.</p>
-            <p class="byline">Zihao Ye, and others, including <strong>Seungmin Oh</strong> and Jongbin Ryu</p>
-            <p class="imprint"><span class="where">arXiv preprint, 2026</span><a href="https://arxiv.org/abs/2604.19054" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/LPCV2025_Track1_Winning_Solution" target="_blank" rel="noopener">code</a></p>
-          </div>
-          <ul class="tags"><li>VLM</li><li>EfficientAI</li><li>Edge Deployment</li></ul>
-        </li>
-      </ol>
-    </div>
-
-    <div class="year-group">
-      <span class="year">2024</span>
-      <ol class="works stagger">
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/accv-neural-substitution.jpg" alt="Block-level versus branch-level connectivity" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Neural Substitution for Branch-Level Network Re-parameterization</h3>
-            <p class="abstract">Re-parameterization usually works only within a block. Substituting local paths in training keeps branch-level connectivity and folds activations into the linear form.</p>
-            <p class="byline"><strong>Seungmin Oh</strong>, Jongbin Ryu</p>
-            <p class="imprint"><span class="where">Asian Conference on Computer Vision, 2024</span><a href="https://openaccess.thecvf.com/content/ACCV2024/papers/Oh_Neural_Substitution_for_Branch-level_Network_Re-parameterization_ACCV_2024_paper.pdf" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/neural_substitution" target="_blank" rel="noopener">code</a></p>
-          </div>
-          <ul class="tags"><li>Vision</li><li>Re-parameterization</li></ul>
-        </li>
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/sci-reports-cnn-vit.jpg" alt="CNN and ViT robustness comparison" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Analyzing to Discover Origins of CNNs and ViT Architectures in Medical Images</h3>
-            <p class="abstract">Why do CNNs and ViTs behave differently on medical scans? We redo robustness, invariance, and shape-texture analyses to trace where each architecture's behavior originates.</p>
-            <p class="byline"><strong>Seungmin Oh</strong>, Namkug Kim, Jongbin Ryu</p>
-            <p class="imprint"><span class="where">Scientific Reports, 2024</span><a href="https://www.nature.com/articles/s41598-024-58382-3" target="_blank" rel="noopener">paper</a><a>code</a></p>
-          </div>
-          <ul class="tags"><li>Vision</li><li>Architecture</li><li>Analysis</li></ul>
-        </li>
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/pct-sbo-classifier.jpg" alt="Patient cohort selection flow" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Neural Network Classifier for Predicting High-Risk Small Bowel Obstruction Using Abdominal CT Images</h3>
-            <p class="abstract">A neural-network classifier that reads abdominal CT to predict high-risk small bowel obstruction, filed as a PCT patent from the clinical study below.</p>
-            <p class="byline">Hojung Shin, Jongbin Ryu, <strong>Seungmin Oh</strong></p>
-            <p class="imprint"><span class="where">PCT Patent Application</span><span class="state">filed 2024</span></p>
-          </div>
-          <ul class="tags"><li>Vision</li><li>Medical</li><li>Patent</li></ul>
-        </li>
-      </ol>
-    </div>
-
-    <div class="year-group">
-      <span class="year">2023</span>
-      <ol class="works stagger">
-        <li class="work">
-          <span class="plate"><img src="assets/publication_images/ijs-small-bowel.jpg" alt="Dual-branch CT classifier architecture" loading="lazy" onerror="this.remove()"></span>
-          <div>
-            <h3>Deep Learning Using Computed Tomography to Identify High-Risk Patients for Acute Small Bowel Obstruction</h3>
-            <p class="abstract">Judging who needs surgery for small bowel obstruction is hard from CT alone. A dual-branch 3D CNN flags high-risk patients at 0.90 AUROC on a multi-center cohort.</p>
-            <p class="byline"><strong>Seungmin Oh</strong>, Jongbin Ryu, Hojung Shin, and others</p>
-            <p class="imprint"><span class="where">International Journal of Surgery, 2023</span><a href="https://doi.org/10.1097/JS9.0000000000000721" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/DBADRP_Classifier" target="_blank" rel="noopener">code</a></p>
-          </div>
-          <ul class="tags"><li>Vision</li><li>3D CNN</li><li>Clinical Prediction</li></ul>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="funding" class="band reveal">
-    <h2><span>Projects</span></h2>
-    <ul class="commissions stagger">
-      <li>
-        <span class="sponsor">42dot</span>
-        <p>Real-time detection transformer for autonomous driving</p>
-      </li>
-      <li>
-        <span class="sponsor">ETRI</span>
-        <p>Source-free domain adaptation for on-device face recognition</p>
-      </li>
-      <li>
-        <span class="sponsor">ETRI</span>
-        <p>Masked-face recognition with domain adaptation</p>
-      </li>
-      <li>
-        <span class="sponsor">NIA</span>
-        <p>Lymphoma recognition and survival analysis from 3D CT</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="grants" class="band reveal">
-    <h2><span>Research funding</span></h2>
-    <ul class="grants stagger">
-      <li>
-        <span class="sum">$36K</span>
-        <div>
-          <h3>Doctoral Research Grant</h3>
-          <p class="funder">NRF Korea<span class="term">Sep 2025 - Aug 2027</span></p>
-          <p class="project">Progressive Linear Activation for Depth-wise Reparameterization of Large-scale Models</p>
+      <div class="filterbar" hidden>
+        <div class="filters" role="group" aria-label="Filter publications by keyword">
+          <button type="button" data-key="all" aria-pressed="true">All</button>
+          <button type="button" data-key="Vision" aria-pressed="false">Vision</button>
+          <button type="button" data-key="LLM" aria-pressed="false">LLM</button>
+          <button type="button" data-key="VLM" aria-pressed="false">VLM</button>
+          <button type="button" data-key="VLA" aria-pressed="false">VLA</button>
+          <button type="button" data-key="EfficientAI" aria-pressed="false">EfficientAI</button>
+          <button type="button" data-key="Re-parameterization" aria-pressed="false">Re-parameterization</button>
+          <button type="button" data-key="Learning Methodology" aria-pressed="false">Learning Methodology</button>
         </div>
-      </li>
-      <li>
-        <span class="sum">$20K</span>
-        <div>
-          <h3>Lesion-Class Re-labeling in Medical Image Training Data</h3>
-          <p class="funder">NIA Korea<span class="term">Oct 2022 - Dec 2023</span></p>
-        </div>
-      </li>
-    </ul>
-  </section>
+        <p class="filter-note" role="status" aria-live="polite" hidden></p>
+      </div>
 
-  <section id="awards" class="band reveal">
-    <h2><span>Honors and awards</span></h2>
-    <ul class="honours stagger">
-      <li>
-        <span class="stamp">2025</span>
-        <h3>First place, IEEE Low-Power Computer Vision Challenge</h3>
-        <p>Track 1 of 45 teams, at the CVPR 2025 workshop</p>
-        <p class="project">Layer Imitation: Efficient Vision-Language Model on the Mobile NPU</p>
-      </li>
-      <li>
-        <span class="stamp">2023</span>
-        <h3>Global Top 100, Google Solution Challenge</h3>
-        <p>Google</p>
-        <p class="project">Smiler: An Expression-Training App for Children with ASD</p>
-      </li>
-      <li>
-        <span class="stamp">2021</span>
-        <h3>Excellence Award, ICT Mentoring Conference</h3>
-        <p>ACK 2021, KOSIA</p>
-        <p class="project">Recommender System for Web Search Based on NLP to Improve User Search Environment</p>
-      </li>
-      <li>
-        <span class="stamp">2021</span>
-        <h3>Best Student Paper, First Prize</h3>
-        <p>Korea Digital Contents Society</p>
-        <p class="project">Lightweight Video Search Using Video-to-Text Generation and Retrieval</p>
-      </li>
-    </ul>
-  </section>
+      <div class="year-group">
+        <span class="year">2026</span>
+        <ol class="works stagger">
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/emnlp-layerwise-curriculum.png" alt="Layer-wise curriculum with cumulative error over depth" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Layer-wise Curriculum Learning for Efficient LLM Compression</h3>
+              <p class="abstract">Compression error accumulates in deeper layers. Shifting the optimization budget toward them as training proceeds converges 1.7&times; faster while halving GPU memory and hours.</p>
+              <p class="byline">Donggeon Lee, Dooyeon Na, <strong>Seungmin Oh</strong>, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a>paper</a><a href="https://github.com/MMAI-Laboratory/layer_wise_curriculum" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>LLM</li><li>EfficientAI</li><li>Curriculum Learning</li></ul>
+          </li>
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/emnlp-overrep.png" alt="Overcomplete recovery module merged at deployment" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning</h3>
+              <p class="abstract">After pruning, the recovery module is too small to relearn what was removed. Training it overcomplete, then merging it back, gains up to 8.4 points at no deployment cost.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Donggeon Lee, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a>paper</a><a href="https://github.com/MMAI-Laboratory/OverRep" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>LLM</li><li>EfficientAI</li><li>Re-parameterization</li></ul>
+          </li>
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/bmvc-recalibrated-contrastive.jpg" alt="Augmented contrastive space with adaptive re-calibration" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning in Vision-Language Models</h3>
+              <p class="abstract">Fine-tuning a vision-language model compromises its generalization. Transformation-aware prompt conditioning, under a loss re-calibrated for multiple positives, retains both.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">British Machine Vision Conference, 2026</span><a>paper</a><a href="https://github.com/SoongE/ReCalCon" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>VLM</li><li>Learning Methodology</li></ul>
+          </li>
+        </ol>
+      </div>
 
-  <section id="wip" class="band reveal">
-    <h2><span>In progress</span></h2>
-    <ul class="docket stagger">
-      <li>
-        <span class="subject">New VLA training mechanism</span>
-        <p>Changing what the policy is trained to predict, so skills carry across robots instead of binding to one.</p>
-      </li>
-      <li>
-        <span class="subject">Efficient VLA inference</span>
-        <p>Cutting the compute spent on every control step while keeping task success.</p>
-      </li>
-      <li>
-        <span class="subject">Closed-loop failure detection</span>
-        <p>Noticing that an action is going wrong early enough for the policy to recover.</p>
-      </li>
-      <li>
-        <span class="subject">Efficient test-time adaptation</span>
-        <p>Adapting under distribution shift at inference time, cheaply and without collapse.</p>
-      </li>
-      <li>
-        <span class="subject">Adaptive regularization</span>
-        <p>Letting regularization respond to the data instead of applying one fixed strength.</p>
-      </li>
-    </ul>
-  </section>
+      <div class="year-group">
+        <span class="year">2025</span>
+        <ol class="works stagger">
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/lpcvc2025-layer-merging.jpg" alt="Layer merging with hidden-state imitation" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Evaluation of Winning Solutions of 2025 Low Power Computer Vision Challenge</h3>
+              <p class="abstract">The 2025 challenge benchmarked efficient vision models on real edge hardware. This report covers the competition design and the winning entries, including our Track 1 solution.</p>
+              <p class="byline">Zihao Ye, and others, including <strong>Seungmin Oh</strong> and Jongbin Ryu</p>
+              <p class="imprint"><span class="where">arXiv preprint, 2026</span><a href="https://arxiv.org/abs/2604.19054" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/LPCV2025_Track1_Winning_Solution" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>VLM</li><li>EfficientAI</li><li>Edge Deployment</li></ul>
+          </li>
+        </ol>
+      </div>
 
-  <section id="misc" class="band reveal">
-    <h2><span>Beyond papers</span></h2>
-    <div class="colophon">
-      <p>
-        I built and operated our lab's GPU cluster, which consists of about 20 nodes with
-        eight RTX 3090s each. This work included containerized provisioning, per-node CUDA
-        isolation, and training jobs that ran unattended for days. Outside of research, I
-        taught AI tutorials for undergraduate research assistants and helped launch the
-        Google Developer Student Club chapter at Ajou University.
-      </p>
+      <div class="year-group">
+        <span class="year">2024</span>
+        <ol class="works stagger">
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/accv-neural-substitution.jpg" alt="Block-level versus branch-level connectivity" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Neural Substitution for Branch-Level Network Re-parameterization</h3>
+              <p class="abstract">Re-parameterization usually works only within a block. Substituting local paths in training keeps branch-level connectivity and folds activations into the linear form.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">Asian Conference on Computer Vision, 2024</span><a href="https://openaccess.thecvf.com/content/ACCV2024/papers/Oh_Neural_Substitution_for_Branch-level_Network_Re-parameterization_ACCV_2024_paper.pdf" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/neural_substitution" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>Vision</li><li>Re-parameterization</li></ul>
+          </li>
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/sci-reports-cnn-vit.jpg" alt="CNN and ViT robustness comparison" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Analyzing to Discover Origins of CNNs and ViT Architectures in Medical Images</h3>
+              <p class="abstract">Why do CNNs and ViTs behave differently on medical scans? We redo robustness, invariance, and shape-texture analyses to trace where each architecture's behavior originates.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Namkug Kim, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">Scientific Reports, 2024</span><a href="https://www.nature.com/articles/s41598-024-58382-3" target="_blank" rel="noopener">paper</a><a>code</a></p>
+            </div>
+            <ul class="tags"><li>Vision</li><li>Architecture</li><li>Analysis</li></ul>
+          </li>
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/pct-sbo-classifier.jpg" alt="Patient cohort selection flow" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Neural Network Classifier for Predicting High-Risk Small Bowel Obstruction Using Abdominal CT Images</h3>
+              <p class="abstract">A neural-network classifier that reads abdominal CT to predict high-risk small bowel obstruction, filed as a PCT patent from the clinical study below.</p>
+              <p class="byline">Hojung Shin, Jongbin Ryu, <strong>Seungmin Oh</strong></p>
+              <p class="imprint"><span class="where">PCT Patent Application</span><span class="state">filed 2024</span></p>
+            </div>
+            <ul class="tags"><li>Vision</li><li>Medical</li><li>Patent</li></ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2023</span>
+        <ol class="works stagger">
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/ijs-small-bowel.jpg" alt="Dual-branch CT classifier architecture" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Deep Learning Using Computed Tomography to Identify High-Risk Patients for Acute Small Bowel Obstruction</h3>
+              <p class="abstract">Judging who needs surgery for small bowel obstruction is hard from CT alone. A dual-branch 3D CNN flags high-risk patients at 0.90 AUROC on a multi-center cohort.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Jongbin Ryu, Hojung Shin, and others</p>
+              <p class="imprint"><span class="where">International Journal of Surgery, 2023</span><a href="https://doi.org/10.1097/JS9.0000000000000721" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/DBADRP_Classifier" target="_blank" rel="noopener">code</a></p>
+            </div>
+            <ul class="tags"><li>Vision</li><li>3D CNN</li><li>Clinical Prediction</li></ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="funding" class="band reveal">
+      <h2><span>Projects</span></h2>
+      <ul class="commissions stagger">
+        <li>
+          <span class="sponsor">42dot</span>
+          <p>Real-time detection transformer for autonomous driving</p>
+        </li>
+        <li>
+          <span class="sponsor">ETRI</span>
+          <p>Source-free domain adaptation for on-device face recognition</p>
+        </li>
+        <li>
+          <span class="sponsor">ETRI</span>
+          <p>Masked-face recognition with domain adaptation</p>
+        </li>
+        <li>
+          <span class="sponsor">NIA</span>
+          <p>Lymphoma recognition and survival analysis from 3D CT</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="grants" class="band reveal">
+      <h2><span>Research funding</span></h2>
+      <ul class="grants stagger">
+        <li>
+          <span class="sum">$36K</span>
+          <div>
+            <h3>Doctoral Research Grant</h3>
+            <p class="funder">NRF Korea<span class="term">Sep 2025 - Aug 2027</span></p>
+            <p class="project">Progressive Linear Activation for Depth-wise Reparameterization of Large-scale Models</p>
+          </div>
+        </li>
+        <li>
+          <span class="sum">$20K</span>
+          <div>
+            <h3>Lesion-Class Re-labeling in Medical Image Training Data</h3>
+            <p class="funder">NIA Korea<span class="term">Oct 2022 - Dec 2023</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="awards" class="band reveal">
+      <h2><span>Honors and awards</span></h2>
+      <ul class="honours stagger">
+        <li>
+          <span class="stamp">First place</span>
+          <h3>IEEE Low-Power Computer Vision Challenge</h3>
+          <p>Track 1 of 45 teams, at the CVPR workshop<span class="when">2025</span></p>
+          <p class="project">Layer Imitation: Efficient Vision-Language Model on the Mobile NPU</p>
+        </li>
+        <li>
+          <span class="stamp">Global Top 100</span>
+          <h3>Google Solution Challenge</h3>
+          <p>Google<span class="when">2023</span></p>
+          <p class="project">Smiler: An Expression-Training App for Children with ASD</p>
+        </li>
+        <li>
+          <span class="stamp">Excellence Award</span>
+          <h3>ICT Mentoring Conference</h3>
+          <p>ACK, KOSIA<span class="when">2021</span></p>
+          <p class="project">Recommender System for Web Search Based on NLP to Improve User Search Environment</p>
+        </li>
+        <li>
+          <span class="stamp">First Prize</span>
+          <h3>Student Paper Competition</h3>
+          <p>Korea Digital Contents Society<span class="when">2021</span></p>
+          <p class="project">Lightweight Video Search Using Video-to-Text Generation and Retrieval</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="wip" class="band reveal">
+      <h2><span>In progress</span></h2>
+      <ul class="docket stagger">
+        <li>
+          <span class="subject">New VLA training mechanism</span>
+          <p>Changing what the policy is trained to predict, so skills carry across robots instead of binding to one.</p>
+        </li>
+        <li>
+          <span class="subject">Efficient VLA inference</span>
+          <p>Cutting the compute spent on every control step while keeping task success.</p>
+        </li>
+        <li>
+          <span class="subject">Closed-loop failure detection</span>
+          <p>Noticing that an action is going wrong early enough for the policy to recover.</p>
+        </li>
+        <li>
+          <span class="subject">Efficient test-time adaptation</span>
+          <p>Adapting under distribution shift at inference time, cheaply and without collapse.</p>
+        </li>
+        <li>
+          <span class="subject">Adaptive regularization</span>
+          <p>Letting regularization respond to the data instead of applying one fixed strength.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="misc" class="band reveal">
+      <h2><span>Beyond papers</span></h2>
+      <div class="colophon">
+        <p>
+          I built and operated our lab's GPU cluster, which consists of about 20 nodes with
+          eight RTX 3090s each. This work included containerized provisioning, per-node CUDA
+          isolation, and training jobs that ran unattended for days. Outside of research, I
+          taught AI tutorials for undergraduate research assistants and helped launch the
+          Google Developer Student Club chapter at Ajou University.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Seungmin Oh, Suwon, South Korea</span>
+      <a href="mailto:seungmin.oh16@gmail.com">seungmin.oh16@gmail.com</a>
+    </footer>
+
     </div>
-  </section>
-
-  <footer>
-    <span>Seungmin Oh, Suwon, South Korea</span>
-    <a href="mailto:seungmin.oh16@gmail.com">seungmin.oh16@gmail.com</a>
-  </footer>
+  </div>
 
   <div class="tail-anchor" aria-hidden="true"></div>
 
@@ -354,7 +372,7 @@
         child.style.setProperty('--i', i++);
       });
     });
-    // added by script, so the content stays visible if this never runs
+    // set by script, so content stays visible if this never runs
     document.documentElement.classList.add('reveal-ready');
     var enter = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -402,9 +420,10 @@
 
   function build() {
     if (spy) { spy.disconnect(); }
-    line = bar ? bar.offsetHeight + (parseFloat(getComputedStyle(bar).top) || 0) + 28 : 84;
+    var wide = window.matchMedia('(min-width: 1000px)').matches;
+    line = wide ? 120 : (bar ? bar.offsetHeight + (parseFloat(getComputedStyle(bar).top) || 0) + 28 : 84);
     var below = Math.max(0, window.innerHeight - line - 1);
-    // a one-pixel root on the reading line, so the callback fires exactly at a crossing
+    // one-pixel root on the reading line: the callback fires exactly when a section crosses it
     spy = new IntersectionObserver(paint, {
       rootMargin: '-' + line + 'px 0px -' + below + 'px 0px',
       threshold: 0
@@ -483,6 +502,13 @@
   buttons.forEach(function (b) {
     b.addEventListener('click', function () {
       apply(b.getAttribute('aria-pressed') === 'true' ? 'all' : b.dataset.key);
+    });
+  });
+
+  bar.addEventListener('pubfilter', function (e) { apply(e.detail); });
+  document.querySelectorAll('.areas a[data-filter]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      bar.dispatchEvent(new CustomEvent('pubfilter', { detail: a.dataset.filter }));
     });
   });
 

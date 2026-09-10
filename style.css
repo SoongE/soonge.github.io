@@ -396,6 +396,18 @@ em { font-style: italic; }
   white-space: nowrap;
 }
 
+/* ---------- patents ---------- */
+
+.patents { list-style: none; display: grid; gap: 1.1rem; max-width: var(--measure); }
+.patents h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.28;
+}
+.patents .inventors { margin-top: 0.5rem; font-size: var(--fs-small); color: var(--ink-2); }
+.patents .inventors strong { color: var(--ink); font-weight: 600; }
+
 /* ---------- projects ---------- */
 
 .commissions {

@@ -37,6 +37,11 @@
       "url": "https://soonge.github.io/",
       "image": "https://soonge.github.io/assets/profile.jpg",
       "jobTitle": "Ph.D. Candidate",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Multi-Modal Artificial Intelligence Lab",
+        "url": "https://mmai-laboratory.github.io/"
+      },
       "affiliation": {
         "@type": "CollegeOrUniversity",
         "name": "Ajou University",
@@ -62,7 +67,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,300..700;1,300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=102">
+  <link rel="stylesheet" href="style.css?v=103">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e8630c'/></svg>">
 </head>
 <body>
@@ -75,7 +80,7 @@
     </div>
     <div class="intro">
       <h1>Seungmin Oh <span class="hangul" lang="ko">오승민</span></h1>
-      <p class="role">Ph.D. Candidate, Computational Intelligence Lab, Ajou University<span class="advisor">Advised by Prof. Jongbin Ryu</span></p>
+      <p class="role">Ph.D. Candidate, <a href="https://mmai-laboratory.github.io/" target="_blank" rel="noopener">Multi-Modal Artificial Intelligence Lab</a>, Ajou University<span class="advisor">Advised by Prof. Jongbin Ryu</span></p>
       <p class="say">I make large neural networks <span class="key">efficient enough to run</span> under tight compute limits, on edge devices and inside robot control loops.</p>
       <nav class="channels">
         <a href="mailto:seungmin.oh16@gmail.com">Email</a>
@@ -109,6 +114,7 @@
           <li><a href="#news">News</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#patents">Patents</a></li>
           <li><a href="#funding">Projects</a></li>
           <li><a href="#grants">Funding</a></li>
           <li><a href="#awards">Awards</a></li>
@@ -164,7 +170,7 @@
     </section>
 
     <section id="publications" class="band reveal">
-      <h2>Publications and patents</h2>
+      <h2>Publications</h2>
 
       <div class="filterbar" hidden>
         <div class="filters" role="group" aria-label="Filter publications by keyword">
@@ -199,7 +205,7 @@
               <h3>Train Overcomplete, Deploy Compact: Scaling Recovery Capacity for Structured LLM Pruning</h3>
               <p class="abstract">After pruning, the recovery module is too small to relearn what was removed. Training it overcomplete, then merging it back, gains up to 8.4 points at no deployment cost.</p>
               <p class="byline"><strong>Seungmin Oh</strong>, Donggeon Lee, Jongbin Ryu</p>
-              <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a>paper</a><a href="https://github.com/MMAI-Laboratory/OverRep" target="_blank" rel="noopener">code</a></p>
+              <p class="imprint"><span class="where">Empirical Methods in Natural Language Processing, 2026</span><a href="https://arxiv.org/abs/2609.06974" target="_blank" rel="noopener">paper</a><a href="https://github.com/MMAI-Laboratory/OverRep" target="_blank" rel="noopener">code</a></p>
             </div>
             <ul class="tags"><li>LLM</li><li>EfficientAI</li><li>Re-parameterization</li></ul>
           </li>
@@ -209,7 +215,7 @@
               <h3>Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning in Vision-Language Models</h3>
               <p class="abstract">Fine-tuning a vision-language model compromises its generalization. Transformation-aware prompt conditioning, under a loss re-calibrated for multiple positives, retains both.</p>
               <p class="byline"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
-              <p class="imprint"><span class="where">British Machine Vision Conference, 2026</span><a>paper</a><a href="https://github.com/SoongE/ReCalCon" target="_blank" rel="noopener">code</a></p>
+              <p class="imprint"><span class="where">British Machine Vision Conference, 2026</span><a href="https://arxiv.org/abs/2609.06967" target="_blank" rel="noopener">paper</a><a href="https://github.com/SoongE/ReCalCon" target="_blank" rel="noopener">code</a></p>
             </div>
             <ul class="tags"><li>VLM</li><li>Learning Methodology</li></ul>
           </li>
@@ -255,16 +261,6 @@
             </div>
             <ul class="tags"><li>Vision</li><li>Architecture</li><li>Analysis</li></ul>
           </li>
-          <li class="work">
-            <span class="plate"><img src="assets/publication_images/pct-sbo-classifier.jpg" alt="Patient cohort selection flow" loading="lazy" onerror="this.remove()"></span>
-            <div>
-              <h3>Neural Network Classifier for Predicting High-Risk Small Bowel Obstruction Using Abdominal CT Images</h3>
-              <p class="abstract">A neural-network classifier that reads abdominal CT to predict high-risk small bowel obstruction, filed as a PCT patent from the clinical study below.</p>
-              <p class="byline">Hojung Shin, Jongbin Ryu, <strong>Seungmin Oh</strong></p>
-              <p class="imprint"><span class="where">PCT Patent Application</span><span class="state">filed 2024</span></p>
-            </div>
-            <ul class="tags"><li>Vision</li><li>Medical</li><li>Patent</li></ul>
-          </li>
         </ol>
       </div>
 
@@ -283,6 +279,22 @@
           </li>
         </ol>
       </div>
+    </section>
+
+    <section id="patents" class="band reveal">
+      <h2>Patents</h2>
+      <ul class="patents stagger">
+        <li>
+          <h3>System and Method for Compressing a Deep Learning Model Based on Layer-Wise Curriculum Learning</h3>
+          <p class="inventors">Jongbin Ryu, Dooyeon Na, <strong>Seungmin Oh</strong>, Donggeon Lee</p>
+          <p class="imprint"><span class="where">Korean Patent Application No. 10-2026-0123632</span><span class="state">filed Jul 2026</span></p>
+        </li>
+        <li>
+          <h3>Electronic Device and Method for Classifying Small Bowel Obstruction Using Abdominal Computed Tomography Images</h3>
+          <p class="inventors">Hojung Shin, Jongbin Ryu, <strong>Seungmin Oh</strong></p>
+          <p class="imprint"><span class="where">PCT International Patent Application No. PCT/KR2024/014604</span><span class="state">filed Sep 2024</span></p>
+        </li>
+      </ul>
     </section>
 
     <section id="funding" class="band reveal">

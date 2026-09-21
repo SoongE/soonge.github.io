@@ -514,6 +514,7 @@ footer {
   gap: 0.4rem 1.5rem;
 }
 footer a { margin-left: auto; }
+footer .ko { display: block; margin-top: 0.15rem; }
 
 /* ---------- motion ---------- */
 

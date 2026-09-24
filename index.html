@@ -93,7 +93,7 @@
       </nav>
     </div>
     <div class="board">
-      <a class="fact" href="#publications"><strong>7</strong><span>publications, 2023 to 2026</span></a>
+      <a class="fact" href="#publications"><strong>8</strong><span>publications, 2023 to 2026</span></a>
       <a class="fact" href="#awards"><strong>1st</strong><span>of 45 teams at the IEEE Low-Power Computer Vision Challenge, CVPR 2025 workshop</span></a>
       <div class="areas">
         <span>Research areas</span>
@@ -129,6 +129,7 @@
     <section id="news" class="band reveal">
       <h2>News</h2>
       <ul class="feed stagger">
+        <li><span class="when">Sep 2026</span><p>Paper accepted to <strong>NeurIPS 2026</strong>: Efficient Test-time Adaptation through Candidate Verification and Divergence Shifts.</p></li>
         <li><span class="when">Aug 2026</span><p>Two papers accepted to <strong>EMNLP 2026</strong>: Train Overcomplete, Deploy Compact, and Layer-wise Curriculum Learning.</p></li>
         <li><span class="when">Aug 2026</span><p>Paper accepted to <strong>BMVC 2026</strong>: Re-calibrated Contrastive Loss for Transformation-Aware Prompt Conditioning.</p></li>
         <li><span class="when">Sep 2025</span><p>Selected for the <strong>Doctoral Research Grant</strong>, a two-year award from NRF Korea.</p></li>
@@ -164,7 +165,7 @@
           <p>
             Making vision models cheap without giving up accuracy: re-parameterization at branch
             level (ACCV 2024), transfer that keeps a vision-language model general (BMVC 2026),
-            and adaptation at test time under distribution shift. The same drive won Track 1 of
+            and test-time adaptation that verifies candidate labels instead of adjusting predictions (NeurIPS 2026). The same drive won Track 1 of
             the 2025 IEEE Low-Power Computer Vision Challenge.
           </p>
         </article>
@@ -191,6 +192,16 @@
       <div class="year-group">
         <span class="year">2026</span>
         <ol class="works stagger">
+          <li class="work">
+            <span class="plate"><img src="assets/publication_images/neurips-ttc-divergence-shift.jpg" alt="Candidate verification by divergence shift" loading="lazy" onerror="this.remove()"></span>
+            <div>
+              <h3>Efficient Test-time Adaptation through Candidate Verification and Divergence Shifts</h3>
+              <p class="abstract">Test-time adaptation usually keeps adjusting the prediction. Treating each top-k label as a hypothesis and keeping the one whose subspace shifts least is up to 2&times; faster with 3&times; less memory.</p>
+              <p class="byline"><strong>Seungmin Oh</strong>, Seunghun Kang, Jongbin Ryu</p>
+              <p class="imprint"><span class="where">Neural Information Processing Systems, 2026</span><a>paper</a><a>code</a></p>
+            </div>
+            <ul class="tags"><li>VLM</li><li>EfficientAI</li><li>Test-time Adaptation</li></ul>
+          </li>
           <li class="work">
             <span class="plate"><img src="assets/publication_images/emnlp-layerwise-curriculum.png" alt="Layer-wise curriculum with cumulative error over depth" loading="lazy" onerror="this.remove()"></span>
             <div>
@@ -386,10 +397,6 @@
         <li>
           <span class="subject">Closed-loop failure detection</span>
           <p>Noticing that an action is going wrong early enough for the policy to recover.</p>
-        </li>
-        <li>
-          <span class="subject">Efficient test-time adaptation</span>
-          <p>Adapting under distribution shift at inference time, cheaply and without collapse.</p>
         </li>
         <li>
           <span class="subject">Adaptive regularization</span>

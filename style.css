@@ -407,8 +407,7 @@ em { font-style: italic; }
 }
 .links .paper     { --pill-ink: #4a55c9; --pill-bg: #eceefd; --pill-hover: #dfe2fb; --icon: url(assets/icons/paper.svg); }
 .links .code      { --pill-ink: #24262d; --pill-bg: #e9eaee; --pill-hover: #dcdee3; --icon: url(assets/icons/github.svg); }
-.links .artifacts { --pill-ink: #c24a00; --pill-bg: #fdeee3; --pill-hover: #fbe0cc; }
-.links .artifacts::before { background: url(assets/icons/huggingface.svg) center / contain no-repeat; -webkit-mask: none; mask: none; }
+.links .project   { --pill-ink: #7a3fb0; --pill-bg: #f2e9fb; --pill-hover: #e8daf7; --icon: url(assets/icons/project.svg); }
 .links a[href]:hover { background: var(--pill-hover); }
 .links a[href]:active { transform: translateY(1px); }
 .links a:not([href]) { display: none; } /* link not out yet: fill in the href to show it */
